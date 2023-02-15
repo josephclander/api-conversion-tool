@@ -81,3 +81,35 @@ output example:
   "message": "no 'attributes' array from provider"
 }
 ```
+
+### 3. missing expected "key" and "value" keys
+
+input example:
+
+```json
+{
+  "attributes": [
+    {
+      "different": "email",
+      "value": "jamesd@example.com"
+    },
+    {
+      "key": "name",
+      "not_value": "James Dean"
+    },
+    {
+      "key": "shoesize",
+      "value": 10
+    }
+  ]
+}
+```
+
+output example:
+
+```json
+{
+  "shoesize": 10,
+  "unexpected_values": 2
+}
+```
