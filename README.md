@@ -1,4 +1,5 @@
 # Cyclr Conversion Tool
+![tests](https://github.com/josephclander/api-conversion-tool/actions/workflows/node.js.yml/badge.svg)
 
 A function to convert an api provider's response data into in-house standard format.
 
