@@ -1,4 +1,5 @@
 # Api Conversion Tool
+
 ![tests](https://github.com/josephclander/api-conversion-tool/actions/workflows/node.js.yml/badge.svg)
 
 A function to convert an api provider's response data into in-house standard format.
@@ -12,8 +13,8 @@ const conversion = function (data) {
   const dataMap = {};
 
   data.attributes.forEach((attr) => {
-    const key = attr['key'];
-    const value = attr['value'];
+    const key = attr["key"];
+    const value = attr["value"];
     dataMap[key] = value;
   });
 
@@ -38,7 +39,7 @@ But we know apis can be updated, not follow their own schema or have unexpected 
 Other considerations could include:
 
 - trimming whitespace from data
-- provide a list of missing/extra data keys recieved than expected
+- provide a list of missing/extra data keys received than expected
 
 ```js
 const conversion = function (data) {
@@ -49,8 +50,8 @@ const conversion = function (data) {
   let errorCount = 0;
 
   data.attributes.forEach((attr) => {
-    const key = attr['key'];
-    const value = attr['value'];
+    const key = attr["key"];
+    const value = attr["value"];
 
     if (!key || !value) {
       errorCount += 1;
@@ -59,7 +60,7 @@ const conversion = function (data) {
     }
   });
   if (errorCount > 0) {
-    dataMap['unexpected_values'] = errorCount;
+    dataMap["unexpected_values"] = errorCount;
   }
 
   return dataMap;
