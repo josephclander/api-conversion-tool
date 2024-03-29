@@ -1,4 +1,4 @@
-# Api Conversion Tool
+# API Conversion Tool
 
 ![tests](https://github.com/josephclander/api-conversion-tool/actions/workflows/node.js.yml/badge.svg)
 
